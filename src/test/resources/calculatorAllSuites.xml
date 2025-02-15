@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Calculator Test Suite" parallel="tests" thread-count="4">
+<suite-files>
+    <suite-file path="calculatorSumTest.xml"/>
+    <suite-file path="calculatorDivideTest.xml"/>
+    <suite-file path="calculatorMultiplyTest.xml"/>
+    <suite-file path="calculatorSubstractTest.xml"/>
+</suite-files>
+
+
+
+</suite>
