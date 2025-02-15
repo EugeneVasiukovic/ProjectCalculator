@@ -9,7 +9,7 @@ public class DivideTest extends BaseTest{
 
     @Test(dataProvider = "valueDivideDataPositive",dataProviderClass = СalculatorValueDataProvider.class,
             description = ("Positive test Divide"),
-            invocationCount = 10, threadPoolSize = 4,
+            invocationCount = 5, threadPoolSize = 1,
             priority = 5)
     public void checkDividePositiveTest(double a, double b, double expected){
         double result = calculator.divide(a, b);

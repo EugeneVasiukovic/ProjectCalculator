@@ -9,7 +9,7 @@ public class SubtractTest extends BaseTest{
 
     @Test(dataProvider = "valueSubtractDataPositive",dataProviderClass = СalculatorValueDataProvider.class,
             description = ("Positive test Subtract"),
-            invocationCount = 10, threadPoolSize = 4 ,
+            invocationCount = 10, threadPoolSize = 1 ,
             priority = 5)
     public void checkSubtractPositiveTest(int a, int b, int expected){
         int result = calculator.subtract(a, b);

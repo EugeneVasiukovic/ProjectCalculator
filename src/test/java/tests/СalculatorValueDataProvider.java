@@ -56,7 +56,7 @@ public class СalculatorValueDataProvider {
     public Object[][] valueMultiplyDataPositive() {
         return new Object[][]{
                 {2, 3, 6},
-                {5, 7, 30},
+                {5, 7, 35},
                 {5, 5, 25},
                 {12, 12, 144},
                 {6, 6, 36},

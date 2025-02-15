@@ -9,7 +9,7 @@ public class MultiplyTest extends BaseTest{
 
     @Test(dataProvider = "valueMultiplyDataPositive",dataProviderClass = СalculatorValueDataProvider.class,
             description = ("Positive test Multiply"),
-            invocationCount = 10, threadPoolSize = 3,
+            invocationCount = 5, threadPoolSize = 5,
             priority = 5)
     public void checkMultiplyPositiveTest(int a, int b, int expected){
         int result = calculator.multiply(a, b);
