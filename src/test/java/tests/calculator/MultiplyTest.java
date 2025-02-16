@@ -3,11 +3,12 @@ package tests.calculator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.Retry;
-import tests.СalculatorValueDataProvider;
+import tests.CalculatorValueDataProvider;
 
-public class MultiplyTest extends BaseTest{
+public class MultiplyTest extends BaseTest {
 
-    @Test(dataProvider = "valueMultiplyDataPositive",dataProviderClass = СalculatorValueDataProvider.class,
+    @Test(dataProvider = "valueMultiplyDataPositive",
+            dataProviderClass = CalculatorValueDataProvider.class,
             description = ("Positive test Multiply"),
             invocationCount = 5, threadPoolSize = 5,
             priority = 5)
@@ -16,7 +17,8 @@ public class MultiplyTest extends BaseTest{
         Assert.assertEquals(result, expected);
     }
 
-    @Test(dataProvider = "valueMultiplyDataNegative",dataProviderClass = СalculatorValueDataProvider.class,
+    @Test(dataProvider = "valueMultiplyDataNegative",
+            dataProviderClass = CalculatorValueDataProvider.class,
             description = ("Negative test Multiply"),
             retryAnalyzer = Retry.class ,
             priority = 2)

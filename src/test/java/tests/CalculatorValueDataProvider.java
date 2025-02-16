@@ -2,7 +2,7 @@ package tests;
 
 import org.testng.annotations.DataProvider;
 
-public class СalculatorValueDataProvider {
+public class CalculatorValueDataProvider {
 
     @DataProvider(name = "valueSumDataPositive")
     public Object[][] valueSumDataPositive() {

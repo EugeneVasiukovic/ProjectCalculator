@@ -3,11 +3,12 @@ package tests.calculator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.Retry;
-import tests.СalculatorValueDataProvider;
+import tests.CalculatorValueDataProvider;
 
-public class DivideTest extends BaseTest{
+public class DivideTest extends BaseTest {
 
-    @Test(dataProvider = "valueDivideDataPositive",dataProviderClass = СalculatorValueDataProvider.class,
+    @Test(dataProvider = "valueDivideDataPositive",
+            dataProviderClass = CalculatorValueDataProvider.class,
             description = ("Positive test Divide"),
             invocationCount = 5, threadPoolSize = 1,
             priority = 5)
@@ -16,7 +17,8 @@ public class DivideTest extends BaseTest{
         Assert.assertEquals(result, expected);
     }
 
-    @Test(dataProvider = "valueDivideDataNegative",dataProviderClass = СalculatorValueDataProvider.class,
+    @Test(dataProvider = "valueDivideDataNegative",
+            dataProviderClass = CalculatorValueDataProvider.class,
             description = ("Negative test Divide"),
             retryAnalyzer = Retry.class ,
             priority = 2)
@@ -29,7 +31,7 @@ public class DivideTest extends BaseTest{
             retryAnalyzer = Retry.class,
             priority = 10)
     public void checkDivideZeroTest(){
-        int result = calculator.multiply(6, 0);
+        double result = calculator.divide(6, 0);
         Assert.assertEquals(result, 0);
     }
 }

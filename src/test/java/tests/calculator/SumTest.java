@@ -1,15 +1,14 @@
 package tests.calculator;
 
-import app.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.Retry;
-import tests.СalculatorValueDataProvider;
+import tests.CalculatorValueDataProvider;
 
-public class SumTest extends BaseTest{
+public class SumTest extends BaseTest {
 
-
-    @Test(dataProvider = "valueSumDataPositive",dataProviderClass = СalculatorValueDataProvider.class,
+    @Test(dataProvider = "valueSumDataPositive",
+            dataProviderClass = CalculatorValueDataProvider.class,
             description = ("Positive test sum"),
             invocationCount = 10, threadPoolSize = 2,
             priority = 6)
@@ -18,7 +17,8 @@ public class SumTest extends BaseTest{
         Assert.assertEquals(result, expected);
     }
 
-    @Test(dataProvider = "valueSumDataNegative",dataProviderClass = СalculatorValueDataProvider.class,
+    @Test(dataProvider = "valueSumDataNegative",
+            dataProviderClass = CalculatorValueDataProvider.class,
             description = ("Negative test sum"),
             retryAnalyzer = Retry.class ,
             priority = 2)
